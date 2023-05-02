@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  discord-cloud-server-bot:
+    build: .
+    container_name: discord-cloud-server-bot
+    restart: unless-stopped
