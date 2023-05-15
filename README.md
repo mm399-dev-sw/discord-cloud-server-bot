@@ -19,6 +19,7 @@ Discord bot to remotely start/stop and manage cloud VMs hosted on GCP
     [ list ]: Lists all available VMs
 
 Commands without arguments will print general information.
+Default prefix is '+', but it may be changed in appl/default.conf
 
 ## Installation
 
@@ -45,3 +46,16 @@ Commands without arguments will print general information.
 6. Save this file under appl/authentication/auth-key.json. The name of the file can be adjusted in appl/default.conf
 
 7. Add your Discord token and the ID of your GCP project to appl/default.conf. The ID may be obtained by accessing the project selection.
+
+### Docker host
+
+1. Navigate into the root of the repository
+
+2. Build and run the container with the command 'docker compose up -d'
+
+3. The bot should come online in Discord
+
+## Creating a game server
+
+For example to create a Valheim server on the default port
+'+install valheim lloesche/valheim-server 2456 WORLD_NAME=saltheim SERVER_PASS=123456789 SERVER_PUBLIC=false'
